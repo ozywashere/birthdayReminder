@@ -11,12 +11,6 @@ function App() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isError, setIsError] = useState(false);
-  const [isChecked, setIsChecked] = useState(false);
-  const handleCheck = (id) => {
-    const newUsers = users.map((user) => user.id === id);
-    setIsChecked(!isChecked);
-    setUsers(newUsers);
-  };
 
   const fetchUsers = async () => {
     try {
